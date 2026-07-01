@@ -1,12 +1,11 @@
 name: CI Pipeline
 
 # This workflow is intentionally incomplete. Read it, change it, and extend it.
+# Hinzufügen der cd, um vom Projekt-root ins csharp-Verzeichnis zu wechseln
 
-on:
+on: 
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: ['**']
 
 jobs:
   build-and-test:
@@ -22,8 +21,10 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: cd csharp && dotnet restore
 
       - name: Build project
-        run: dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
-
+        run: cd csharp && dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
+        
+      - name: Test all branches before push
+        run: cd csharp && dotnet test --no-build --configuration Release
