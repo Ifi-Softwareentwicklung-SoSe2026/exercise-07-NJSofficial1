@@ -1,6 +1,7 @@
 name: CI Pipeline
 
 # This workflow is intentionally incomplete. Read it, change it, and extend it.
+# Hinzufügen der cd, um vom Projekt-root ins csharp-Verzeichnis zu wechseln
 
 on: 
   push:
