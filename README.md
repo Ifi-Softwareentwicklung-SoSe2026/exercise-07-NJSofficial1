@@ -11,7 +11,7 @@ date: 2026-06-23
 
 [![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/exercise-07-NJSofficial1/refs/heads/main/README.md)
 
-![CI Status](https://img.shields.io/github/actions/workflow/status/Ifi-Softwareentwicklung-SoSe2026/exercise_07/ci.yml?branch=main&label=CI)
+![CI Status](https://img.shields.io/github/actions/workflow/status/Ifi-Softwareentwicklung-SoSe2026/exercise-07-NJSofficial1/ci.yml?branch=main&label=CI)
 
 tags: [Sommersemester2026, Softwareentwicklung, Übung07]
 
@@ -19,7 +19,7 @@ tags: [Sommersemester2026, Softwareentwicklung, Übung07]
 
 [![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/exercise-07-NJSofficial1/refs/heads/main/README.md)
 
-![CI Status](https://img.shields.io/github/actions/workflow/status/Ifi-Softwareentwicklung-SoSe2026/exercise_07/ci.yml?branch=main&label=CI)
+![CI Status](https://img.shields.io/github/actions/workflow/status/Ifi-Softwareentwicklung-SoSe2026/exercise-07-NJSofficial1/ci.yml?branch=main&label=CI)
 
 # Aufgabe 07
 
