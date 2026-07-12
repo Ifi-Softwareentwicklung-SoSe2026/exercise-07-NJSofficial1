@@ -23,6 +23,9 @@ jobs:
       - name: Restore dependencies
         run: cd csharp && dotnet restore
 
+      - name: Verify formatting and code style
+        run: cd csharp && dotnet format --verify-no-changes --verbosity diagnostic
+
       - name: Build project
         run: cd csharp && dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
         
