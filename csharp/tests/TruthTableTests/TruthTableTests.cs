@@ -5,6 +5,7 @@ using Xunit;
 using LogicExpressions;
 using Input;
 using TruthTable;
+using System.Security.Cryptography.X509Certificates;
 
 namespace TruthTableTests;
 
@@ -66,3 +67,27 @@ public class CLIIntegrationstests
     }
 }
 
+// Unittests für log. Operatoren, Klammerpriorität
+public class OperatorKlammerTests
+{
+    [Theory]
+    // AND-Testdaten
+    [InlineData(LogicOperator.And, true, true, true)]
+    [InlineData(LogicOperator.And, true, false, false)]
+    // OR-Testdatem
+    [InlineData(LogicOperator.Or, false, true, true)]
+    [InlineData(LogicOperator.Or, false, false, false)]
+    public void KorrekteBerechnungPruefen(LogicOperator op, bool a, bool b, bool erwartung)
+    {
+        var WertA = new Variable("A"); // Hinweis: "new Variable", nicht "newVariable"
+        var WertB = new Variable("B");
+        
+        // dynamisches Erstellen der richtigen Prüfbedingung je nach Operator
+        var klausel = new LogicClause(op, WertA, WertB);
+        var zuweisungen = new Dictionary<string, bool> { { "A", a }, { "B", b } };
+
+        bool ergebnis = TruthExpressionEvaluator.Evaluate(klausel, zuweisungen);
+
+        Assert.Equal(erwartung, ergebnis);
+    }
+}
