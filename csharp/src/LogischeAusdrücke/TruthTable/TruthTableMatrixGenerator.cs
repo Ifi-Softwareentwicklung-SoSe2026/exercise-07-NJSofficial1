@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using LogicExpressions;
 using ParsedTruthTerm = LogicExpressions.TruthTerm;
 
