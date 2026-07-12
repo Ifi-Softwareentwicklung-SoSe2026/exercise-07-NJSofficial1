@@ -1,4 +1,3 @@
-using LogicExpressions;
 using ParsedTruthTerm = LogicExpressions.TruthTerm;
 
 namespace TruthTable;

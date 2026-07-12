@@ -1,5 +1,4 @@
 using Input;
-using LogicExpressions;
 using ParsedTruthTerm = LogicExpressions.TruthTerm;
 
 namespace TruthTermSimplifier;

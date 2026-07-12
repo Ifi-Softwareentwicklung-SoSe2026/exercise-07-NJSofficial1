@@ -1,6 +1,4 @@
-﻿using System;
 using TruthTable;
-using TruthTermSimplifier;
 
 /// <summary>
 /// Application entry point and command dispatcher.

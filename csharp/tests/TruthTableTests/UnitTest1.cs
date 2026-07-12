@@ -1,4 +1,4 @@
-﻿namespace TruthTableTests;
+namespace TruthTableTests;
 
 public class UnitTest1
 {
