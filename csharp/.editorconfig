@@ -1,0 +1,26 @@
+root = true
+
+[*.cs]
+# --- Kodierung & Zeilenenden ---
+charset = utf-8                    # Zeichenkodierung der Quelldateien
+end_of_line = lf                   # Zeilenende-Format (Unix-Stil, für CI-Konsistenz)
+insert_final_newline = true        # Erzwingung einer Leerzeile am Dateiende
+trim_trailing_whitespace = true    # Entfernung von Leerzeichen am Zeilenende
+indent_style = space               # Einrückung mittels Leerzeichen statt Tabulatoren
+indent_size = 4                    # Anzahl der Leerzeichen pro Einrückungsebene
+
+# --- Behandlung von Code-Style-Regeln als Fehler (Fehlschlag der CI bei Verstoß) ---
+dotnet_diagnostic.IDE0055.severity = error   # Meldung von Formatierungsverstößen als Fehler
+
+# --- Behandlung von using-Direktiven (Namespace-Importe) ---
+dotnet_sort_system_directives_first = true      # Voranstellung der System-Namespace-Importe
+dotnet_separate_import_directive_groups = false # Verzicht auf Leerzeilen zwischen Import-Gruppen
+csharp_using_directive_placement = outside_namespace:error # Platzierung der Importe außerhalb der Namespace-Deklaration
+
+# --- Sprachfeatures & Stilkonventionen ---
+csharp_style_namespace_declarations = file_scoped:error       # Verwendung dateiweiter Namespace-Deklarationen
+csharp_prefer_braces = true:error                             # Erzwingung geschweifter Klammern bei Kontrollstrukturen
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:warning # Angabe von Zugriffsmodifizierern bei Nicht-Interface-Mitgliedern
+
+# --- Erkennung ungenutzter using-Direktiven ---
+dotnet_diagnostic.IDE0005.severity = error   # Meldung nicht verwendeter Namespace-Importe als Fehler
