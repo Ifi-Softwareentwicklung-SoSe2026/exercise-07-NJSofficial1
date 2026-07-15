@@ -30,7 +30,7 @@ jobs:
         run: sudo apt-get install doxygen
 
       - name: Generate Doxygen file
-        run: doxygen
+        run: cd csharp && doxygen ../Doxyfile
 
       - name: Upload RTF artifact
         uses: actions/upload-artifact@v5
