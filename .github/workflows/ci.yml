@@ -26,6 +26,18 @@ jobs:
       - name: Verify formatting and code style
         run: cd csharp && dotnet format --verify-no-changes --verbosity diagnostic
 
+      - name: Install Doxygen
+        run: sudo apt-get install doxygen
+
+      - name: Generate Doxygen file
+        run: cd csharp && doxygen ../Doxyfile
+
+      - name: Upload RTF artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: doxygen-rtf-documentation
+          path: docs/rtf/retman.rtf
+
       - name: Build project
         run: cd csharp && dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
         
