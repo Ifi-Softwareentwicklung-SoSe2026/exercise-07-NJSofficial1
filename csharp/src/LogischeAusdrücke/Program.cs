@@ -1,13 +1,11 @@
-﻿using System;
 using TruthTable;
-using TruthTermSimplifier;
 
 /// <summary>
 /// Application entry point and command dispatcher.
 /// </summary>
 public static class Program
 {
-    private const string TABLE = "tabele";
+    private const string TABLE = "tabelle";
     private const string SIMPLIFY = "vereinfachen";
 
     /// <summary>
