@@ -37,3 +37,9 @@ jobs:
         with:
           name: doxygen-rtf-documentation
           path: docs/rtf/retman.rtf
+
+      - name: Build project
+        run: cd csharp && dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
+        
+      - name: Test all branches before push
+        run: cd csharp && dotnet test --no-build --configuration Release
