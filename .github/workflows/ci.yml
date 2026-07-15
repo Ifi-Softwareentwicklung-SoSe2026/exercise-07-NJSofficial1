@@ -27,3 +27,8 @@ jobs:
       - name: Build project
         run: dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
 
+      - name: Upload RTF artifact
+        uses: actions/upload-artifcat@v5
+        with:
+          name: doxygen-rtf-documentation
+          path: docs/rtf/retman.rtf
