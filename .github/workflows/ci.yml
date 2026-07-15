@@ -27,8 +27,14 @@ jobs:
       - name: Build project
         run: dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
 
+      - name: Install Doxygen
+        run: sudo apt-get install doxygen
+
+      - name: Generate Doxygen file
+        run: doxygen
+
       - name: Upload RTF artifact
-        uses: actions/upload-artifcat@v5
+        uses: actions/upload-artifact@v5
         with:
           name: doxygen-rtf-documentation
           path: docs/rtf/retman.rtf
